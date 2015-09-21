@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       # redirect user_path(user)
-      redirect_to user
+      # redirect_to user
+      redirect_back_or user
     else
       # 创建一个错误消息
       flash.now[:danger] = 'Invalid email/password combination'
