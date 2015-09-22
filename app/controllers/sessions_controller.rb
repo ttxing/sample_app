@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
   def create
     # render 'new'
     user = User.find_by(email: params[:session][:email].downcase)
-    if user && user.authenticated?(:remember, cookies[:remember_token])
+    # debugger
+    if user && user.authenticate(params[:session][:password])
       # 重定向到用户页面
       if user.activated?
         log_in user
