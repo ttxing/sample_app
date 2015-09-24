@@ -11,6 +11,7 @@ gem 'mini_magick', '3.8.0'
 gem 'fog', '1.23.0'
 gem 'will_paginate', '3.0.7'
 gem 'bootstrap-will_paginate', '0.0.10'
+gem 'rails-i18n', '~> 4.0' # For 4.0.x  
 # Use SCSS for stylesheets
 gem 'sass-rails', '5.0.0.beta1'
 # Use Uglifier as compressor for JavaScript assets
